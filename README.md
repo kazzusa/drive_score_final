@@ -35,11 +35,6 @@ To ensure the application functions reliably as a real-time driving monitor, a t
 
 The application is built using Flutter, which inherently provides cross-platform compatibility for both Android and iOS devices. However, Android is prioritized as the primary platform to ensure high accessibility for users who may not possess high-end flagship smartphones. By utilizing stable, officially maintained plugins such as Firebase Core and Geolocator, the architecture ensures long-term support, allowing for straightforward compatibility updates and future feature enhancements.
 
-<img width="200" height="450" alt="Screenshot 2026-06-29 235513" src="https://github.com/user-attachments/assets/1134802f-bd09-47d4-ba84-4aa4e3846b05" />
-<img width="200" height="450" alt="Screenshot 2026-06-29 235648" src="https://github.com/user-attachments/assets/973c2a26-5aea-4a6b-b0dd-e391a2adeb9d" />
-<img width="200" height="450" alt="Screenshot 2026-06-29 235711" src="https://github.com/user-attachments/assets/ad2dd9fa-e69c-419f-a84a-dd315dbc4edb" />
-<img width="200" height="450" alt="Screenshot 2026-06-29 235740" src="https://github.com/user-attachments/assets/324400b9-1203-467e-8111-1762ea91e422" />
-
 The application was designed with a strict, linear screen navigation flow to prevent accidental data loss and reduce cognitive load on the driver. The user initiates the application on the HomeScreen, where they can view past session histories and interact with a prominent primary "Start" button. Upon initiating a drive, the system performs a location permission check before transitioning to the DrivingScreen. This active tracking interface explicitly locks native device back-swipes utilizing Flutter's PopScope widget, ensuring the session is not accidentally terminated by the user. The tracking concludes only when the user explicitly taps the "Stop" button, which transitions the flow to the ResultScreen. Here, the final computed score and event log are displayed. Finally, navigating back returns the user to the HomeScreen, which automatically triggers a state refresh to display the newly recorded session.
 
 The project lifecycle was systematically planned and executed with clear milestones aligning with the logical design requirements. The initiation phase spanned from May 3 to May 14, 2026, during which initial ideation occurred and the "Drive Score" topic was officially finalized on May 5. Following this, the requirement analysis phase took place between May 15 and May 26, highlighted by the critical decision to utilize specific GPS plugins on May 23 and the establishment of the logical screen flow. From May 27 to June 9, the team shifted focus to UI/UX design, utilizing Figma for comprehensive layout prototyping, defining the centralized AppTheme colors, and engineering custom reusable Flutter widgets. The core development phase commenced on June 10 and concluded on June 28. This period encompassed Firebase integration, device telemetry algorithm implementation, UI consistency alignment, and real-life road testing. The project concludes with the presentation and finalization phase beginning on June 29, with dedicated time allocated until July 2 for incorporating post-presentation feedback into the official documentation.
@@ -76,6 +71,12 @@ gantt
 ```
 
 ## Project Design
+
+<img width="200" height="450" alt="Screenshot 2026-06-29 235513" src="https://github.com/user-attachments/assets/1134802f-bd09-47d4-ba84-4aa4e3846b05" />
+<img width="200" height="450" alt="Screenshot 2026-06-29 235648" src="https://github.com/user-attachments/assets/973c2a26-5aea-4a6b-b0dd-e391a2adeb9d" />
+<img width="200" height="450" alt="Screenshot 2026-06-29 235711" src="https://github.com/user-attachments/assets/ad2dd9fa-e69c-419f-a84a-dd315dbc4edb" />
+<img width="200" height="450" alt="Screenshot 2026-06-29 235740" src="https://github.com/user-attachments/assets/324400b9-1203-467e-8111-1762ea91e422" />
+
 During the design phase, our team kinda focused on making something clean, simple, and user friendly for Drive Score. Like, since this application is made for mobile devices, we planned the UI with mobile design principles in mind, especially for those smaller screen sizes. The big goal was to make sure users can reach important things pretty fast, for example the driving score, speed, distance, and any detected unsafe driving events, without the whole screen feeling crowded or, you know confusing.
 
 For the user interface (UI), we used Flutter widgets such as Scaffold, AppBar, Container, Card, Text, and Icon to build the screens in a structured and responsive way. These widgets helped us create a consistent layout across multiple screens while maintaining good readability. We also implemented touch gestures and simple button interactions to make navigation smooth and easy for users.
