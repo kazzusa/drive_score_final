@@ -1,0 +1,30 @@
+name: drive_score
+description: A driving safety score app that monitors speeding, harsh braking, and sharp turns.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  geolocator: ^11.0.0
+  sensors_plus: ^4.0.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.2
+  permission_handler: ^11.3.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
